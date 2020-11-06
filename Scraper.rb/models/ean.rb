@@ -4,7 +4,7 @@ class Ean
 
   def initialize(attributes = {})
     @id = attributes[:id]
-    @name = attributes[:name]
-    @address = attributes[:address]
+    @ean = attributes[:ean]
+    @tree_data = attributes[]
   end
 end
