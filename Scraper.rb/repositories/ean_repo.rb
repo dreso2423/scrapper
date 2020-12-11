@@ -3,19 +3,20 @@ require_relative "ean"
 
 class Ean
   def initialize(csv_file)
-    @ean = [] # <--- <Recipe> instances
+    @eans = [] # <--- <Recipe> instances
     @csv_file = csv_file
     load_csv
   end
+
   def all
-    return @recipes
+    return @eans
   end
 
   private
 
   def load_csv
     CSV.foreach(@csv_file) do |row|
-      @recipes << Recipe.new(row[0], row[1])
+      @recipes << Ean.new(row[0])
     end
   end
 
